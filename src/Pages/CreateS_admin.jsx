@@ -36,7 +36,7 @@ function CreateS_admin() {
     };
   
     // Effectuer la requête POST en utilisant fetch
-    fetch('http://localhost:3000/sAdmin/Signup', {
+    fetch('https://minetrack-back.onrender.com/sAdmin/Signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

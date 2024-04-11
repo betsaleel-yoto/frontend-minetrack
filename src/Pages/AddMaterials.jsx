@@ -27,7 +27,7 @@ const [Date,setDate]=useState('')
   useEffect(() => {
     const id =parseInt(localStorage.getItem('ShipmentId'))
     console.log(id)
-    fetch('http://localhost:3000/shipments/getAll')
+    fetch('https://minetrack-back.onrender.com/shipments/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -46,7 +46,7 @@ const [Date,setDate]=useState('')
   useEffect(() => {
     const id =parseInt(localStorage.getItem('ShipmentId'))
     console.log(id)
-    fetch('http://localhost:3000/shipments/getAll')
+    fetch('https://minetrack-back.onrender.com/shipments/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -64,7 +64,7 @@ const [Date,setDate]=useState('')
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/materials/getAll')
+    fetch('https://minetrack-back.onrender.com/materials/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -134,7 +134,7 @@ const [Date,setDate]=useState('')
     };
   
     // Effectuer la requête POST en utilisant fetch
-    fetch('http://localhost:3000/materials/Create', {
+    fetch('https://minetrack-back.onrender.com/materials/Create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -202,7 +202,7 @@ const [Date,setDate]=useState('')
     };
   
     // Effectuer la requête PUT en utilisant fetch
-    fetch(`http://localhost:3000/materials/edit/${id}`, {
+    fetch(`https://minetrack-back.onrender.com/materials/edit/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

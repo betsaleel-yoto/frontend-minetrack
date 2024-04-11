@@ -29,7 +29,7 @@ function Dashboard() {
   //orinary
 
   useEffect(() => {
-    fetch("http://localhost:3000/users/getAll")
+    fetch("https://minetrack-back.onrender.com/users/getAll")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Erreur lors de la récupération des données");
@@ -48,7 +48,7 @@ function Dashboard() {
   //Admin
 
   useEffect(() => {
-    fetch("http://localhost:3000/users/getAll")
+    fetch("https://minetrack-back.onrender.com/users/getAll")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Erreur lors de la récupération des données");
@@ -72,12 +72,12 @@ function Dashboard() {
       const id = parseInt(localStorage.getItem("ShipmentId"));
       try {
         // Remplacez 'URL_VERS_VOTRE_API_EXPEDITIONS' par l'URL appropriée
-        const response = await fetch("http://localhost:3000/shipments/getAll");
+        const response = await fetch("https://minetrack-back.onrender.com/shipments/getAll");
         const shipmentData = await response.json();
 
         // Remplacez 'URL_VERS_VOTRE_API_TACHES' par l'URL appropriée
         const taskResponse = await fetch(
-          "http://localhost:3000/shipmentTasks/getAll"
+          "https://minetrack-back.onrender.com/shipmentTasks/getAll"
         );
         const taskData = await taskResponse.json();
 
@@ -115,7 +115,7 @@ function Dashboard() {
   //Material
 
   useEffect(() => {
-    fetch("http://localhost:3000/materials/getAll")
+    fetch("https://minetrack-back.onrender.com/materials/getAll")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Erreur lors de la récupération des données");
@@ -151,7 +151,7 @@ function colorMat(Current,initial){
   //Vehicle
 
   useEffect(() => {
-    fetch("http://localhost:3000/vehicle/getAll")
+    fetch("https://minetrack-back.onrender.com/vehicle/getAll")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Erreur lors de la récupération des données");
@@ -225,7 +225,7 @@ function colorMat(Current,initial){
     };
 
     // Effectuer la requête POST en utilisant fetch
-    fetch("http://localhost:3000/users/Signup", {
+    fetch("https://minetrack-back.onrender.com/users/Signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -276,7 +276,7 @@ function colorMat(Current,initial){
     };
 
     // Effectuer la requête POST en utilisant fetch
-    fetch(`http://localhost:3000/users/edit/${matriculationNumber}`, {
+    fetch(`https://minetrack-back.onrender.com/users/edit/${matriculationNumber}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

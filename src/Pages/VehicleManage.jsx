@@ -24,7 +24,7 @@ const [shipments, setShipments] = useState([]);
 
 useEffect(() => {
   const id =localStorage.getItem('ShipmentId')
-  fetch('http://localhost:3000/shipments/getAll')
+  fetch('https://minetrack-back.onrender.com/shipments/getAll')
     .then(response => {
       if (!response.ok) {
         throw new Error('Erreur lors de la récupération des données');
@@ -93,7 +93,7 @@ useEffect(() => {
     };
   
     // Effectuer la requête POST en utilisant fetch
-    fetch('http://localhost:3000/vehicle/Add', {
+    fetch('https://minetrack-back.onrender.com/vehicle/Add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -129,7 +129,7 @@ useEffect(() => {
   
 
   useEffect(() => {
-    fetch('http://localhost:3000/vehicle/getAll')
+    fetch('https://minetrack-back.onrender.com/vehicle/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -170,7 +170,7 @@ useEffect(() => {
     };
   
     // Effectuer la requête PUT en utilisant fetch
-    fetch(`http://localhost:3000/vehicle/edit/${vehicleRegistrationNumber}`, {
+    fetch(`https://minetrack-back.onrender.com/vehicle/edit/${vehicleRegistrationNumber}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

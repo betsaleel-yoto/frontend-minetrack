@@ -20,7 +20,7 @@ function S_adminLogin() {
       })
     };
 
-    fetch('http://localhost:3000/sAdmin/Login', requestData)
+    fetch('https://minetrack-back.onrender.com/sAdmin/Login', requestData)
       .then(response => {
         if (!response.ok) {
           console.error('Erreur lors de la requête');

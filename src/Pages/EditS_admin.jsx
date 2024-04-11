@@ -33,7 +33,7 @@ function EditS_admin() {
     };
 
     // Effectuer la requête POST en utilisant fetch
-    fetch(`http://localhost:3000/sAdmin/edit/${matriculationNumber}`, {
+    fetch(`https://minetrack-back.onrender.com/sAdmin/edit/${matriculationNumber}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

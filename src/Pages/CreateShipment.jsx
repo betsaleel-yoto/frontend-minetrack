@@ -33,7 +33,7 @@ function CreateShipment() {
   
 
   useEffect(() => {
-    fetch('http://localhost:3000/users/getAll')
+    fetch('https://minetrack-back.onrender.com/users/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -49,7 +49,7 @@ function CreateShipment() {
   }, [shipments]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/shipments/getAll')
+    fetch('https://minetrack-back.onrender.com/shipments/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -65,7 +65,7 @@ function CreateShipment() {
   }, [shipmentsDetails]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/participant/getAll')
+    fetch('https://minetrack-back.onrender.com/participant/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -82,7 +82,7 @@ function CreateShipment() {
   }, [Driver]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/participant/getAll')
+    fetch('https://minetrack-back.onrender.com/participant/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -100,7 +100,7 @@ function CreateShipment() {
 
   useEffect(() => {
     const id =localStorage.getItem('ShipmentId')
-    fetch('http://localhost:3000/shipments/getAll')
+    fetch('https://minetrack-back.onrender.com/shipments/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -117,7 +117,7 @@ function CreateShipment() {
 
   useEffect(() => {
     const id =parseInt(localStorage.getItem('ShipmentId'))
-    fetch('http://localhost:3000/shipmentTasks/getAll')
+    fetch('https://minetrack-back.onrender.com/shipmentTasks/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -186,7 +186,7 @@ function CreateShipment() {
         matriculationNumberSadmin: matriculationNumber
       };
   
-      const response = await fetch('http://localhost:3000/shipments/Add', {
+      const response = await fetch('https://minetrack-back.onrender.com/shipments/Add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -224,7 +224,7 @@ try{
       ShipmentId:id
     };
 
-    fetch('http://localhost:3000/participant/add', {
+    fetch('https://minetrack-back.onrender.com/participant/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -264,7 +264,7 @@ try{
       ShipmentId:id
     };
 
-    fetch('http://localhost:3000/shipmentTasks/Create', {
+    fetch('https://minetrack-back.onrender.com/shipmentTasks/Create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -301,7 +301,7 @@ try{
       }
     const updatedTaskState = event.target.checked ? 'finished' : 'in progress';
   
-    fetch(`http://localhost:3000/shipmentTasks/edit/${taskId}`, {
+    fetch(`https://minetrack-back.onrender.com/shipmentTasks/edit/${taskId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -372,7 +372,7 @@ try{
     };
 
     // Effectuer la requête POST en utilisant fetch
-    fetch(`http://localhost:3000/shipments/edit/${id}`, {
+    fetch(`https://minetrack-back.onrender.com/shipments/edit/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

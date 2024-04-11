@@ -49,7 +49,7 @@ const dateValidator = (inputValue) => {
 };
 
 useEffect(() => {
-  fetch('http://localhost:3000/orders/getAll')
+  fetch('https://minetrack-back.onrender.com/orders/getAll')
     .then(response => {
       if (!response.ok) {
         throw new Error('Erreur lors de la récupération des données');
@@ -86,7 +86,7 @@ const sendData = async() => {
   };
 
   // Effectuer la requête POST en utilisant fetch
-  fetch('http://localhost:3000/orders/Add', {
+  fetch('https://minetrack-back.onrender.com/orders/Add', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

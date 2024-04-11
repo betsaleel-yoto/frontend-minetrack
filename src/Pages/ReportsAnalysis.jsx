@@ -12,7 +12,7 @@ function ReportsAnalysis() {
   const [task, settask] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/vehicle/getAll')
+    fetch('https://minetrack-back.onrender.com/vehicle/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -31,7 +31,7 @@ function ReportsAnalysis() {
   useEffect(() => {
     const id =localStorage.getItem('ShipmentId')
     console.log(id)
-    fetch('http://localhost:3000/shipments/getAll')
+    fetch('https://minetrack-back.onrender.com/shipments/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -50,7 +50,7 @@ function ReportsAnalysis() {
 
   useEffect(() => {
     const id =localStorage.getItem('ShipmentId')
-    fetch('http://localhost:3000/participant/getAll')
+    fetch('https://minetrack-back.onrender.com/participant/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
@@ -70,7 +70,7 @@ function ReportsAnalysis() {
 
   useEffect(() => {
     const id =localStorage.getItem('ShipmentId')
-    fetch('http://localhost:3000/shipmentTasks/getAll')
+    fetch('https://minetrack-back.onrender.com/shipmentTasks/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erreur lors de la récupération des données');
